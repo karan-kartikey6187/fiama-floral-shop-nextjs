@@ -1,0 +1,21 @@
+
+// Shop Page Breadcrumb Section
+
+.view-btn.active{
+    background-color: var(--bs-primary);
+    img{
+      filter: brightness(0) invert(1);
+    }
+}
+
+.view-btn:not(.active){
+   &:hover img{
+     filter: brightness(0) saturate(100%) invert(45%) sepia(79%) saturate(276%) hue-rotate(298deg) brightness(89%) contrast(161%);
+   }
+}
+
+.category-list{
+ a.active {
+   color: var(--bs-primary) !important;
+ }
+}

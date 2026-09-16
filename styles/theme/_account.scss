@@ -1,0 +1,54 @@
+// @import "../styles/theme/variables";
+
+.account-nav {
+  .nav-item {
+    a.active {
+      div {
+        // background-color: var(--dark);
+        background-color: var(--dark-500);
+      }
+      img {
+        filter: brightness(0) invert(1);
+      }
+      p {
+        color: var(--white);
+      }
+    }
+    a {
+      p {
+        color: var(--dark);
+      }
+      &:not(.active):hover {
+        img {
+          filter: brightness(0) saturate(100%) invert(45%) sepia(79%)
+            saturate(276%) hue-rotate(298deg) brightness(89%) contrast(161%) !important;
+        }
+        p {
+          color: var(--bs-primary);
+        }
+      }
+    }
+  }
+}
+
+.my-account-wrapper {
+  @media (min-width: "992px") {
+    margin-top: -16px !important;
+  }
+}
+
+#myAccountDetailsForm ,#registerForm{
+  input:focus{
+     border: 1px solid $primary !important;
+  }
+}
+
+.order-detail{
+  color: var(--dark);
+}
+
+#registerConfirmPassword, #registerConfirmNewPassword, #registerPassword {
+  &:focus{
+     border: 1px solid $primary !important;
+  }
+}

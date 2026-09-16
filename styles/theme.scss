@@ -1,0 +1,20 @@
+@import "./theme/variables";
+
+// @import "bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "./theme/icons";
+@import "./theme/header";
+@import "./theme/footer";
+@import "./theme/_home";
+@import "./theme/shop";
+@import "./theme/product-details";
+@import "./theme/cart";
+@import "./theme/wishlist";
+@import "./theme/checkout";
+@import "./theme/account";
+@import "./theme/login";
+@import "./theme/register";
+@import "./theme/modal";
+@import "./theme/not-found";
+@import "./theme/custom";

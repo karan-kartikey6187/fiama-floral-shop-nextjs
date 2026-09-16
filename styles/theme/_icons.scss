@@ -1,0 +1,67 @@
+// Icons
+.icon {
+  &--20px {
+    height: 20px;
+    width: 20px;
+  }
+
+  &--30px {
+    height: 30px;
+    width: 30px;
+  }
+
+  &--50px {
+    height: 50px;
+    width: 50px;
+  }
+
+  &--50px-icon {
+    height: 50px;
+    width: 50px;
+    &:hover {
+      background-color: var(--bs-primary) !important;
+      color: $white;
+    }
+
+    &:hover img {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &--40px {
+    height: 40px;
+    width: 40px;
+
+    &:hover {
+      background-color: var(--bs-primary) !important;
+      color: $white;
+    }
+
+    &:hover img {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &--12px {
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(45%) sepia(79%) saturate(276%)
+        hue-rotate(298deg) brightness(89%) contrast(161%) !important;
+    }
+  }
+}
+
+.icon-box:hover,
+.icon-comment:hover {
+  .icon-link {
+    filter: brightness(0) saturate(100%) invert(45%) sepia(79%) saturate(276%)
+      hue-rotate(298deg) brightness(89%) contrast(161%);
+  }
+  sup,
+  p {
+    color: var(--bs-primary);
+  }
+}

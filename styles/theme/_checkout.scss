@@ -1,0 +1,172 @@
+$person-fill: url("/icons/person-fill.svg");
+
+// Form 
+
+#reviewForm{
+   input, textarea{
+      &:focus, &:focus-visible{
+         outline: none;
+      }
+      &::placeholder{
+         color: var(--dark);
+      }
+   }
+}
+
+
+// .form-check-input {
+//    &:checked{
+//       border: none;
+//       background-color: blue;
+//    }
+//    &:focus{
+//       box-shadow: none;
+//    }
+// }
+
+.comment-box, 
+.name-box, 
+.email-box, 
+.website-box, 
+.loging-name-box, 
+.loging-email-box,
+.phone-box {
+   &::after{
+      content: "";
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      width: 15px;
+      height: 15px;
+      background-image: url("/icons/pencil-fill.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+   }
+}
+.name-box{
+   &::after{
+      background-image: url("/icons/person-fill.svg");
+   }
+}
+.email-box{
+   &::after{
+      background-image: url("/icons/envelope-fill.svg");
+   }
+}
+.website-box{
+   &::after{
+      background-image: url("/icons/globe.svg");
+   }
+}
+.phone-box{
+   &::after{
+      background-image: url("/icons/telephone-fill.svg");
+   }
+}
+
+
+// CheckOut 
+
+#loginDropdown{
+   transition: 0.3s;
+}
+.loging-name-box{
+   &::after{
+      right: 25px;
+      top: 15px;
+      width: 15px;
+      height: 28px;
+      background-image: url("/icons/person-fill.svg");
+   }
+}
+.loging-email-box{
+   &::after{
+      right: 25px;
+      top: 15px;
+      width: 16px;
+      height: 28px;
+      background-image: url("/icons/envelope-fill.svg");
+   }
+}
+.loging-name-box, .loging-email-box, .login-password-box, .login-email-box{
+   input:focus-visible{
+    outline: var(--bs-primary) auto 1px;
+   }
+}
+.checkOutCouponBtn{
+   &:focus{
+      box-shadow: none;
+      background-color:  #f4f4f4;
+      border: 1px solid var(--bs-primary) !important;
+   }
+}
+
+// CheckOut Icons
+
+.fname-box,
+.lname-box,
+.email-box2,
+.phone-box,
+.company-box,
+.address-box{
+   &::after{
+      content:"";
+      position:absolute;
+      right:25px;
+      top:15px;
+      width:15px;
+      height:15px;
+      background-size:contain;
+      background-repeat:no-repeat;
+   }
+   input:focus-visible{
+    outline: $primary auto 1px;
+   }
+}
+.fname-box::after,
+.lname-box::after{
+   background-image: $person-fill;
+}
+.email-box2::after{
+   background-image:url("/icons/envelope-fill.svg");
+}
+.phone-box::after{
+   background-image:url("/icons/telephone-fill.svg");
+}
+.company-box::after,
+.address-box::after{
+   background-image:url("/icons/globe.svg");
+}
+
+// Notes Icon
+.notes-box{
+   &::after{
+      content:"";
+      position:absolute;
+      right:20px;
+      top:20px;
+      width:16px;
+      height:16px;
+      background-image:url("/icons/pencil-fill.svg");
+      background-size:contain;
+      background-repeat:no-repeat;
+   }
+}
+
+// Textarea Focus
+#orderNotes{
+   &:focus,
+   &:focus-visible{
+      box-shadow:none;
+   }
+}
+#createAccount{
+   &:focus{
+      outline: none;
+   }
+}
+.billingFormWrapper input, .billingFormWrapper textarea, .payment-feilds input{
+   &:focus-visible, &:focus{
+    outline: var(--bs-primary) auto 1px;
+   }
+}

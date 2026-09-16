@@ -1,0 +1,135 @@
+
+
+:root {
+  --white: #fff;
+  --light: #666666;
+  --dark: #000000;
+  --dark-500: #000000;
+
+  --light-grey-bg: #f4f7fc;
+  --grey-bg: #f4f4f4;
+  --light-grey: #999999;
+  --dark-grey: #545454;
+  --light-dark-bg: #272829;
+
+  --bs-primary: #e55472;
+  --bs-secondary: #9ac45c;
+  --grey-bg-500: #fdfdfd;
+}
+
+[data-bs-theme="dark"] {
+  --white: #fff;
+  --light: #aaa;
+  --dark: #fff;
+
+  --light-grey-bg: #2b2b2b;
+  --grey-bg: #343434;
+  --light-grey: #aaa;
+  --dark-grey: #ccc;
+  --light-dark-bg: #1f1f1f;
+
+  --bs-primary: #ff718d;
+  --bs-secondary: #b5d878;
+  --dark-500: #747373;
+
+  --grey-bg-500: #333333;
+
+  .icon--50px {
+    filter: brightness(0) invert(1) !important;
+
+    &img {
+      filter: brightness(0) invert(1) !important;
+    }
+  }
+
+  .icon--20px {
+    filter: brightness(0) invert(1) !important;
+
+    &img {
+      filter: brightness(0) invert(1) !important;
+    }
+  }
+  .card-image {
+    .card-options {
+      background-color: var(--grey-bg-500) !important;
+    }
+  }
+
+  .hero-carousel-btn {
+    filter: brightness(0) invert(1) !important;
+  }
+}
+
+// Color And Background
+
+.text-light-grey {
+  color: var(--light);
+}
+
+.bg-light-grey-600 {
+  background-color: var(--light-grey-bg);
+}
+
+.bg-light-grey-500 {
+  background-color: var(--light-grey-bg);
+}
+
+.text-grey-normal {
+  color: var(--light);
+}
+
+.bg-light-grey {
+  background-color: var(--grey-bg);
+}
+
+.text-light-grey-800 {
+  color: var(--light-grey);
+}
+.bg-light-grey-800 {
+  background-color: var(--dark-grey);
+}
+
+.bg-light-dark {
+  background-color: var(--light-dark-bg);
+}
+
+// Custom Font Size
+
+.fs-13 {
+  font-size: 13px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-32 {
+  font-size: 2rem;
+}
+
+// Custom Spaces
+
+.pb-70px {
+  padding-bottom: 70px;
+}
+
+.mb-4px {
+  margin-bottom: 4px !important;
+}
+
+.py-8px {
+  padding-block: 8px;
+}
+
+.me-4px {
+  margin-left: 4px;
+}
+
+.form-check-input[type="radio"] {
+  accent-color: $primary;
+}
+
+.form-check-input[type="checkbox"]:checked {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}

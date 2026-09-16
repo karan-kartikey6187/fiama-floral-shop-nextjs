@@ -1,0 +1,148 @@
+
+// Header Section
+
+.search-bar {
+  min-width: 380px;
+  @media (min-width: 1200px) {
+    min-width: 450px;
+  }
+}
+
+.header-links {
+  .nav-link {
+    border-bottom: none;
+  }
+}
+
+.badge-icon {
+  left: 125% !important;
+  height: 20px;
+  width: 20px;
+}
+
+.start-10 {
+  left: 10%;
+}
+
+.nav-item ul {
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s ease;
+}
+
+.nav-item ul.show-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-bar-offcanvas {
+  max-width: 100%;
+  width: 100%;
+}
+
+.offcanvas-wrapper {
+  height: 100vh;
+}
+
+.offcanvas.offcanvas-start {
+  overflow-y: auto;
+}
+
+.offcanvas-body {
+  overflow: visible;
+  flex-grow: 0;
+}
+.accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+
+.btn-close {
+  --bs-btn-close-focus-shadow: none;
+}
+
+.nav-link,
+a {
+  cursor: pointer;
+  &:hover {
+    color: var(--bs-primary) !important;
+  }
+  &:focus {
+    color: #999999;
+  }
+}
+
+.brand-partner-img {
+  img {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  img {
+    transition: all 0.3s ease;
+  }
+}
+
+// Custom Nav
+
+.custom-nav-item {
+  position: relative;
+  // width: 100vw;
+
+  .custom-dropdown {
+    position: absolute;
+    top: 100%;
+    
+    left: 50%;
+    padding: 25px 0;
+    // min-width: calc(100vw - 100px);
+    gap: 30px;
+    background-color: var(--white);
+    border-top: 2px solid var(--bs-primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+  }
+}
+
+.pages-dropdown{
+  // height: 450px;
+  gap: 20px !important;
+}
+
+.custom-dropdown {
+  opacity: 0;
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.7s ease;
+}
+
+.custom-nav-item:hover .custom-dropdown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+// Shop Dropdown and Header offcanvas Scrollbar and Scrollbar Thumb  Modify
+.nav-shop-options-list::-webkit-scrollbar,
+.header-offcanvas::-webkit-scrollbar, 
+.pages-dropdown::-webkit-scrollbar {
+  width: 3px !important;
+  background-color: #fbf8f8 !important;
+}
+
+.nav-shop-options-list::-webkit-scrollbar-thumb,
+.header-offcanvas::-webkit-scrollbar-thumb,
+.pages-dropdown::-webkit-scrollbar-thumb {
+  background: rgb(177, 177, 177);
+  border-radius: 20px;
+}
+
+.accordion-header button {
+  padding-inline: 0;
+  cursor: pointer;
+  &:hover {
+    color: $primary !important;
+  }
+}

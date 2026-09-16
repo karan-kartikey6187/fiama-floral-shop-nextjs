@@ -1,0 +1,18 @@
+// Wishlist
+
+.wishlist-add-cart-btn{
+   color: white;
+   margin-block: 10px;
+   transition: all .4s ease;
+   background-color: #565656;
+   &:hover{
+      background-color: var(--bs-primary);
+      color: var(--white) !important;
+   }
+}
+
+.wishlist-items-wrapper{
+   .wishlist-item > *{
+      border-bottom: 1px solid lightgray;
+   }
+}

@@ -1,0 +1,101 @@
+import Link from "next/link";
+import { Button, Image, Modal } from "react-bootstrap";
+
+export const CartModal = ({ show, handleClose, image, title = "Roses Surprise" }) => {
+
+    return (
+        <>
+            <Modal
+                show={show}
+                onHide={handleClose}
+                centered
+                className="custom-modal"
+                style={{ zIndex: 10000 }}
+                id="modalWishlist"
+                restoreFocus={false}
+            >
+                <div className="modal-wishlist p-3">
+                    <Modal.Body className="d-flex flex-column flex-sm-row p-4 gap-4">
+                        <Button
+                            type="button"
+                            className="cart-modal-remove-btn bg-primary d-flex justify-content-center align-items-center rounded-0"
+                            style={{
+                                height: "40px",
+                                width: "40px"
+                            }}
+                            onClick={handleClose}
+                        >
+                            <Image
+                                src='/icons/remove-white.svg'
+                                alt="Close"
+                            />
+                        </Button>
+                        <Image
+                            src={image}
+                            alt=""
+                            style={{
+                                width: "125px",
+                                height: "162px"
+                            }}
+                        />
+                        <div>
+                            <h2 className="mb-0 display-3 fw-medium text-black">
+                                {title}
+                            </h2>
+                            <div className="d-flex align-items-center mt-3">
+                                <div
+                                    className="rounded-circle bg-success d-flex justify-content-center align-items-center"
+                                    style={{
+                                        height: "16px",
+                                        width: "16px",
+                                        marginRight: "4px"
+                                    }}
+                                >
+                                    <Image src='/icons/check.svg' alt="" />
+                                </div>
+                                <p className="mb-0 fw-normal">
+                                    Successfully added to your Cart
+                                </p>
+                            </div>
+                            <div className="mt-4 d-flex gap-2 flex-wrap flex-lg-nowrap">
+                                <Link
+                                    href="/cart"
+                                    className="proceed-btn btn rounded-0 checkout-btn fs-14 fw-medium text-center px-3 py-1"
+                                    style={{ paddingBlock: "0.5rem" }}
+                                >
+                                    View Cart
+                                </Link>
+                                <Link
+                                    href="/checkout"
+                                    className="apply-coupon-btn btn rounded-0 bg-light-grey-800 text-nowrap fs-14 px-3 fw-medium py-1"
+                                    style={{ paddingBlock: "0.5rem" }}
+                                >
+                                    Checkout
+                                </Link>
+                            </div>
+                        </div>
+                    </Modal.Body>
+                    <Modal.Footer className="mt-6 p-0 pt-5">
+                        <div className="text-center">
+                            <p className="mb-4 fw-normal text-wrap lh-sm">
+                                We want to give you{" "}
+                                <span className="fw-medium">
+                                    10% discount
+                                </span>{" "}
+                                for your first order,
+                                Use (fiama10) discount code at checkout
+                            </p>
+                            <div>
+                                <Image
+                                    fluid
+                                    src='/images/payment.webp'
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </Modal.Footer>
+                </div>
+            </Modal>
+        </>
+    );
+};

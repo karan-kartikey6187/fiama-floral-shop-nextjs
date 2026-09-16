@@ -1,0 +1,42 @@
+.cart-modal-remove-btn {
+  @media (min-width: 576px) {
+    position: absolute;
+    right: -1%;
+    top: -2%;
+    margin-top: 0px;
+  }
+}
+
+#modalWishlist,
+#modalQuickView {
+  .modal-content {
+    border-radius: 0px;
+  }
+}
+
+.custom-modal {
+  .modal-dialog {
+    max-width: 550px;
+  }
+}
+
+
+.quickView-modal-remove-btn {
+  @media (min-width: 576px) {
+    position: absolute;
+    right: 0%;
+    top: -15%;
+    margin-top: 0px;
+  }
+}
+
+#modalQuickView {
+    .modal-dialog {
+        border: 0 !important;
+    }
+
+    .modal-content {
+        border: 0 !important;
+        box-shadow: none;
+    }
+}

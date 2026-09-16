@@ -1,0 +1,102 @@
+// Cart Page
+
+.cart-img{
+   max-width: 100px;
+}
+
+.cart-item > * {
+   border-bottom: 1px solid lightgrey;
+   @media (min-width: 768px) {
+         border-bottom: none;
+         .cart-item{
+            border-bottom: 1px solid lightgrey;
+         }
+   }
+}
+
+@media (min-width: 768px) {
+      .cart-item{
+         border-bottom: 1px solid lightgrey;
+      }
+      .apply-btn-wrapper, .apply-coupon-input{
+         max-width: fit-content;
+      }
+      .wishlist-add-cart-btn{
+         width: 20%;
+    }
+    .wishlist-item{
+       border-bottom: 1px solid lightgrey;
+    }
+    .wishlist-item-remove-btn{
+      width: auto !important;
+    }
+   .wishlist-item > *{
+      border-bottom: none !important;
+   }
+}
+
+@media (min-width: 576px) {
+    .cart-summary{
+      min-width: 450px;
+      max-width: 450px;
+    }
+}
+
+.cart-summary{
+   width: 100%;
+}
+.cart-item-remove-btn:hover img, .wishlist-item-remove-btn:hover img{
+     filter: brightness(0) saturate(100%) invert(45%) sepia(79%) saturate(276%) hue-rotate(298deg) brightness(89%) contrast(161%);
+}
+
+.cart-item > div:first-child{
+   border-bottom: none !important;
+}
+
+.apply-coupon-btn{
+      cursor:pointer;
+      color: white;
+      background:linear-gradient(to left, white 50%, #565656 50%);
+      background-size:200% 100%;
+      background-position:left bottom;
+      transition:all 0.5s ease;
+    }
+    .apply-coupon-btn:hover{
+      background-position:right bottom;
+      border:1px solid $primary;
+      color: black;
+      
+    }
+
+
+.proceed-btn{
+   color: white;
+   background:linear-gradient(to right, white 50%, var(--bs-primary) 50%);
+   background-size:200% 100%;
+   background-position:right bottom;
+   transition:all 0.5s ease;
+}
+
+.proceed-btn:hover{
+      background-position:left bottom;
+      border:1px solid black;
+      color: var(--dark) !important;
+   }
+
+.apply-coupon-input{
+   input:focus{
+      border: 1px solid var(--bs-primary) !important;
+   }
+}
+
+.wishlist-add-cart-btn{
+   background-color: #565656;
+   &:hover{
+      background-color: var(--bs-primary);
+      color: white !important;
+   }
+}
+
+.cart-update-btn{
+   background-color:  #696868 !important;
+}

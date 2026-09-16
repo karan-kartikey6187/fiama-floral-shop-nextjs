@@ -1,0 +1,311 @@
+
+// Hero Section
+
+.hero-next-btn,
+.hero-prev-btn {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.hero-next-btn {
+  transform: translateX(100px);
+}
+
+.hero-prev-btn {
+  transform: translateX(-100px);
+}
+
+.hero-section {
+  &:hover {
+    .hero-next-btn {
+      transform: translateX(20px);
+      opacity: 1;
+    }
+    .hero-prev-btn {
+      transform: translateX(-20px);
+      opacity: 1;
+    }
+  }
+}
+
+.hero-image-1,
+.hero-image-2 {
+  height: 540px;
+
+  @media (min-width: "576px") {
+    height: 570px;
+  }
+  @media (min-width: "768px") {
+    height: 670px;
+  }
+  @media (min-width: "976px") {
+    height: 700px;
+  }
+}
+
+.carousel-inner .hero-image-1 {
+  background: url(/images/hero-img-1.webp) center/cover no-repeat;
+  width: 100%;
+}
+
+.carousel-inner .hero-image-2 {
+  background: url(/images/hero-img-2.webp) center/cover no-repeat;
+  width: 100%;
+}
+
+.underline-start {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -17px;
+    height: 2px;
+    width: 90px;
+    background-color: $primary;
+  }
+}
+
+.carousel-control-btn {
+  z-index: 500;
+  border: 1px solid gray;
+  &:hover {
+    background-color: $primary !important;
+    border: none;
+    .carousel-icon {
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+}
+
+.carousel-next-icon,
+.carousel-prev-icon {
+  img {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+#carouselExampleIndicators {
+  &:hover {
+    .carousel-control-prev-btn,
+    .carousel-control-next-btn {
+      transform: translateX(0);
+      transition: all 0.4s ease;
+    }
+  }
+  overflow: hidden;
+}
+
+.shop-now-btn.btn-primary:hover {
+  background-color: $dark-light;
+  border-color: $dark-light;
+  a {
+    color: white !important;
+  }
+}
+
+.carousel-indicators [data-bs-target="#carouselExampleIndicators"].active {
+  background-color: $primary;
+}
+
+.shop-now-btn.btn-primary {
+  --bs-btn-hover-bg: $dark-light !important;
+  --bs-btn-hover-border-color: $white !important;
+}
+
+// Service Card Section
+
+.serivce-cards-wrapper {
+  @media (min-width: 1200px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Flower Day Offer Section
+
+.flower-day-card,
+.flower-deal-card,
+.best-offer-card {
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+  img {
+    transition: all 1s ease;
+  }
+}
+
+// New Arrival Section
+
+.new-arrival-section .underline-start {
+  &::before {
+    right: 0;
+    left: auto;
+    bottom: -10px;
+    width: 100px;
+  }
+}
+
+.card-image {
+  .card-options {
+    transform: translateY(90px);
+    transition: all 0.4s ease;
+  }
+}
+
+.card:hover {
+  .card-image {
+    .card-options {
+      transform: translateY(0);
+    }
+  }
+}
+
+.card-options,
+.card-options-shop {
+  a.btn:hover,
+  button.btn:hover {
+    background-color: $primary;
+    transition: all 0.4s ease;
+  }
+}
+
+// Top Products Section
+
+.top-products-section {
+  .underline-start {
+    &::before {
+      right: auto;
+      left: 10px;
+      bottom: -8px;
+      width: 100px;
+    }
+  }
+}
+
+.swiper {
+  --swiper-pagination-bullet-horizontal-gap: 8px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--bs-primary);
+  transform: scale(1.1);
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  transition: 0.4s ease;
+}
+
+.container {
+  .swiper-btn {
+    opacity: 0;
+    transition: 0.5s ease;
+
+    &:hover {
+      background-color: var(--bs-primary) !important;
+
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+}
+
+.latest-news-section:hover,
+.top-products-section:hover,
+.related-products-section:hover {
+  .topProductsPrev,
+  .latestNewsPrev {
+    opacity: 1;
+    transform: translateX(-60px);
+  }
+
+  .topProductsNext,
+  .latestNewsNext {
+    opacity: 1;
+    transform: translateX(60px);
+  }
+
+  .relatedProductsNext {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  .relatedProductsPrev {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  @media (min-width: "1200px") {
+    .relatedProductsNext {
+      opacity: 1;
+      transform: translateX(45px);
+    }
+
+    .relatedProductsPrev {
+      opacity: 1;
+      transform: translateX(-45px);
+    }
+  }
+
+  @media (min-width: "1400px") {
+    .relatedProductsNext {
+      opacity: 1;
+      transform: translateX(60px);
+    }
+
+    .relatedProductsPrev {
+      opacity: 1;
+      transform: translateX(-60px);
+    }
+  }
+}
+
+// Brand Partners Section
+
+.brand-partners-section {
+  .container {
+    --bs-gutter-x: 0px;
+  }
+}
+
+.swiper.mySwiper2 .swiper-wrapper {
+  flex-direction: column;
+}
+
+// Latest News Section
+
+.latest-news-section,
+.related-products-section {
+  .underline-start {
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -8px;
+      height: 3px;
+    }
+  }
+}
+
+.latest-news-paragraph {
+  .underline-start {
+    &::before {
+      left: 0;
+      transform: translateX(0);
+      bottom: -24px;
+    }
+  }
+}
+
+.service-banner {
+  background-color: var(--grey-bg-500);
+}
