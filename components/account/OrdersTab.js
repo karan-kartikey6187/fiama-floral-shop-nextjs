@@ -31,7 +31,7 @@ export const OrdersTab = () => {
                     <Table responsive className="mb-0 align-middle">
                         <thead>
                             <tr className="border-bottom border-dark">
-                                <th className="fw-bold p-2 fw-normal">Order ID</th>
+                                <th className="fw-bold p-2 fw-normal text-nowrap">Order ID</th>
                                 <th className="fw-bold p-2 fw-normal">Date</th>
                                 <th className="fw-bold p-2 fw-normal">Status</th>
                                 <th className="fw-bold p-2 fw-normal">Total</th>
@@ -41,8 +41,8 @@ export const OrdersTab = () => {
                         <tbody>
                             {orders.map((order, index) => (
                                 <tr key={order.id}>
-                                    <td className="p-2 fw-normal">{order.id}</td>
-                                    <td className="p-2 fw-normal">{new Date(order.createdAt).toLocaleDateString("en-US", {
+                                    <td className="p-2 fw-normal"><p className='mb-0 ms-3'>{order.id}</p></td>
+                                    <td className="p-2 fw-normal text-nowrap">{new Date(order.createdAt).toLocaleDateString("en-US", {
                                         month: "short",
                                         day: "numeric",
                                         year: "numeric"

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { Services } from "@/components/home/Services";
 import { FlowerDayOffer } from "@/components/home/FlowerDayOffer";
@@ -11,6 +11,7 @@ import { ToastContainer } from "react-toastify";
 import ReduxProvider from "@/components/providers/ReduxProvider";
 import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
+import { BrandPartners } from "@/components/home/BrandPartners";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <TopProducts />
       <BestOfferBanner />
       <LatestNews />
+      <BrandPartners />
       <Footer />
       <ToastContainer />
     </ReduxProvider>

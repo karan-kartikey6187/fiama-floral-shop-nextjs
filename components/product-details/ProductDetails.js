@@ -80,7 +80,7 @@ const ProductDetails = ({ product }) => {
                     </Button>
                 </div>
                 <p
-                    className="text-center fw-normal lh-lg text-black mt-4 mb-6"
+                    className="text-center fw-normal lh-lg text-black mt-4 mb-6 dark-mode-text"
                     id="discription-item"
                 >
                     {product?.description}

@@ -40,7 +40,7 @@ export const WishlistModal = ({ show, handleClose, image, title = "Roses Surpris
                             }}
                         />
                         <div>
-                            <h2 className="mb-0 display-3 fw-medium text-black">
+                            <h2 className="mb-0 display-3 fw-medium text-black dark-mode-text">
                                 {title}
                             </h2>
                             <div className="d-flex align-items-center mt-3">

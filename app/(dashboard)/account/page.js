@@ -55,7 +55,7 @@ const Account = () => {
                     <Nav.Link eventKey="4" className='navlinks p-0'>
                       <div role="button" onClick={handleLogout} className="navlinks text-decoration-none text-dark px-3 py-3 border d-flex justify-content-between align-items-center my-account-tabs">
                         <p className="mb-0 fw-normal">Logout</p>
-                        <Image src='/icons/box-arrow-right.svg' alt="" />
+                        <Image src='/icons/box-arrow-right.svg' alt=""/>
                       </div>
                     </Nav.Link>
                   </Nav.Item>

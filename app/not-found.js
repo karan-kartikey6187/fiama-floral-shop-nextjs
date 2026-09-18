@@ -4,10 +4,9 @@ import { useRouter } from "next/navigation";
 import { Fragment } from "react";
 import { Button } from "react-bootstrap"
 import { FaLongArrowAltLeft } from "react-icons/fa"
-// import { useNavigate } from "react-router-dom"
 
 const NotFound404 = () => {
-//   const navigate = useNavigate()
+
 const router = useRouter();
 
 const hasMounted = useMounted();

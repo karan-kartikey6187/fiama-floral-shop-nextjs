@@ -99,14 +99,14 @@ export const Header = () => {
                     <Image src='/icons/telephone.svg' alt="Phone"  className="icon--20px me-3" width={20} height={20}/>
                     <div>
                       <p className="mb-0 text-light-grey fs-13 fw-medium mb-4px">PHONE</p>
-                      <p className="mb-0"><Link href="tel:0123456789" className="text-decoration-none text-black fs-13 fw-normal text-nowrap">+0123-456-789</Link></p>
+                      <p className="mb-0"><Link href="tel:0123456789" className="text-decoration-none text-black fs-13 fw-normal text-nowrap dark-mode-text">+0123-456-789</Link></p>
                     </div>
                   </div>
                   <div className="search-bar p-1 border border-1 d-none d-lg-flex d-flex align-items-center rounded rounded-5">
                     <Form className="d-flex border-0 w-100" role="search">
                       <Form.Control className="me-2 border-0 fw-normal" type="search" placeholder="Search here..." />
                       <Button variant='transparent' className="border-0" type="submit">
-                        <Image src='/icons/search.svg' alt="Search" width={16} height={16}/>
+                        <Image src='/icons/search.svg' alt="Search" className='search-icon-header' width={16} height={16}/>
                       </Button>
                     </Form>
                   </div>
@@ -114,7 +114,7 @@ export const Header = () => {
                     <Form className="d-flex border-0 w-100 justify-content-center" role="search">
                       <Form.Control className="form-control me-2 border-0 bg-body-tertiary fw-normal" type="search" placeholder="Search here..." />
                       <Button variant='transparent' className="border-0 bg-transparent" type="submit">
-                        <Image src='/icons/search.svg' alt="Search" width={16} height={16}/>
+                        <Image src='/icons/search.svg' alt="Search" className='search-icon-header' width={16} height={16}/>
                       </Button>
                     </Form>
                   </div>
@@ -145,8 +145,6 @@ export const Header = () => {
                           <Link className="text-decoration-none text-light-grey fw-normal" onClick={handleNavClick} href="/wishlist">Wishlist</Link>
                           <Link className="text-decoration-none text-light-grey fw-normal" onClick={handleNavClick} href="/checkout">Checkout</Link>
                           <Link className="text-decoration-none text-light-grey fw-normal" onClick={handleNavClick} href="/account">My Account</Link>
-                          {/* <Link className="text-decoration-none text-light-grey fw-normal" onClick={handleNavClick} href="/login">Sign in</Link>
-                          <Link className="text-decoration-none text-light-grey fw-normal" onClick={handleNavClick} href="/register">Register</Link> */}
                         </div>
                       </Accordion.Body>
                     </Accordion.Item>

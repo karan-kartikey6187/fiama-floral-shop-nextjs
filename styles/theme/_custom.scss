@@ -58,6 +58,26 @@
   .hero-carousel-btn {
     filter: brightness(0) invert(1) !important;
   }
+
+  .dark-mode-text{
+    color: #c8c6c6 !important;
+  }
+
+  .search-icon-header{
+    filter: brightness(0) invert(1) !important;
+  }
+
+  .accordion-button:after {
+      --fiama-floral-accordion-btn-icon: url(/icons/plus.svg);
+      --fiama-floral-accordion-btn-active-icon: url(/icons/dash.svg);
+  }
+
+  .accordion-header button{
+    color: #AAAAAA !important;
+    &::after{
+      filter: brightness(0) invert(1) !important;
+    }
+  }
 }
 
 // Color And Background

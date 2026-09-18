@@ -30,10 +30,10 @@ export const ProductCard = ({ product, swiper = false }) => {
                         <AddToCart product={product} onClick={() => setShowCartModal(true)} />
                         <Button variant='outline-light' className="rounded-0 py-2" onClick={() => setshowQuickViewModal(true)}><Image src='/icons/eye-white.svg' alt="" className='h-auto' width={16} height={16}/></Button>
                     </div>
-                    <Link href={`/product-details/${product?.id}`}><Image src={product?.thumbnail} width={300} height={300} className="card-img-top" alt="" /></Link>
+                    <Link href={`/product-details/${product?.id}`}><Image src={product?.thumbnail} width={317} height={317} className="card-img-top img-fluid" alt="" /></Link>
                 </Card.Body>
                 <Card.Footer className="card-body bg-light-subtle d-flex flex-column align-items-center position-relative mt-auto text-center">
-                    <Link href={`/product-details/${product?.id}`} className="card-text d-inline-block stretched-link text-decoration-none display-5 text-dark fw-normal text-uppercase nav-link" style={{ marginBottom: "10px" }}>{product?.title}</Link>
+                    <Link href={`/product-details/${product?.id}`} className="card-text d-inline-block stretched-link text-decoration-none display-5 text-dark fw-normal text-uppercase nav-link dark-mode-text" style={{ marginBottom: "10px" }}>{product?.title}</Link>
                     <p className="card-text mb-0 text-light-grey fw-semibold mt-1">{ConvertToCurrency(product?.price)}</p>
                 </Card.Footer>
             </Card>

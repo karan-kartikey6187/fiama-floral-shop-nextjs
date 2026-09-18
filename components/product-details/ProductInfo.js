@@ -63,7 +63,7 @@ export const ProductInfo = ({ product }) => {
           >( 95 Reviews )</p>
         </div>
       </div>
-      <p className="mb-5 fw-light text-black">
+      <p className="mb-5 fw-light text-black dark-mode-text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Dignissimos repellendus repudiandae incidunt quidem pariatur
         expedita, quo quis modi tempore non.

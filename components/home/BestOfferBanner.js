@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Container } from 'react-bootstrap'
-// import { NavLink } from 'react-router-dom'
-// import BestOfferBannerImg from "/images/best-offer-banner-img.webp"
 
 export const BestOfferBanner = () => {
     return (

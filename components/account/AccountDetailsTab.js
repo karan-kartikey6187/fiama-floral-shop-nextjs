@@ -80,11 +80,11 @@ export const AccountDetailsTab = () => {
             }
 
             const updateData = {
-                id: user.id,
-                firstName: user.firstName,
-                lastName: user.lastName,
-                email: user.email,
-                password: data.npassword
+                id: user?.id,
+                firstName: user?.firstName,
+                lastName: user?.lastName,
+                email: user?.email,
+                password: data?.npassword
             };
 
             await updateUser(updateData);
@@ -94,7 +94,7 @@ export const AccountDetailsTab = () => {
             setTimeout(() => {
                 localStorage.removeItem("id");
                 localStorage.removeItem("login");
-                router.push("/login");
+                router.push("/auth/signin");
             }, 1000);
 
         } catch (error) {
@@ -109,7 +109,7 @@ export const AccountDetailsTab = () => {
                     <Form id="myAccountDetailsForm" onSubmit={handleSubmitAccount(handleAccountSubmit)}>
                         <div className="row gap-6 myAccountDetailsFormWrapper">
                             <div className="my-account-tab-cantent p-4 bg-light-grey col-12">
-                                <p className="mb-0 fw-light text-black">The following addresses will be used on the checkout page by default.</p>
+                                <p className="mb-0 fw-light text-black dark-mode-text">The following addresses will be used on the checkout page by default.</p>
                             </div>
                             <div className="mb-0 p-0 fname-box-my-account position-relative col-12 col-md-5 flex-grow-1">
                                 <Form.Label htmlFor="fname" className="form-label display-4 fw-light">First name:</Form.Label>
