@@ -131,7 +131,7 @@ export const Header = () => {
                         </div>
                       </Accordion.Body>
                     </Accordion.Item >
-                    <Nav.Link className="text-nowrap text-light-grey fw-normal py-2" href="/checkout">ABOUT US</Nav.Link>
+                    <Nav.Link className="text-nowrap text-light-grey fw-normal py-2" href="#">ABOUT US</Nav.Link>
                     <Accordion.Item eventKey="1" className='border-0'>
                       <Accordion.Header className='border-0'>SHOP</Accordion.Header>
                       <Accordion.Body className='border-0 ps-1 pt-1'>

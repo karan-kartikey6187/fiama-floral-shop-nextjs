@@ -357,7 +357,7 @@ export const BillingDetails = () => {
                             </div>
                         </Col>
                         {cartState?.totalQuantities === 0 ?
-                            <div className="cart-totals col-12 col-lg-6 mt-6 mt-lg-0 text-center fs-3 text-danger pt-7">No Item In Your Cart <br /><p className='mt-3'><Link href="/shop" className='fs-3 fw-semibold text-black text-decoration-none'><FaRegHandPointRight className='text-primary' /> Add Items</Link></p></div> :
+                            <div className="cart-totals col-12 col-lg-6 mt-6 mt-lg-0 text-center fs-3 text-danger pt-7">No Item In Your Cart <br /><p className='mt-3'><Link href="/shop" className='fs-3 fw-semibold text-black text-decoration-none dark-mode-text'><FaRegHandPointRight className='text-primary' /> Add Items</Link></p></div> :
                             <div className="cart-totals col-12 col-lg-6 mt-6 mt-lg-0">
                                 <div className="d-flex align-items-end justify-content-md-end justify-content-center">
                                     <div className="cart-summary">
