@@ -345,7 +345,7 @@ export const BillingDetails = () => {
                                 </Form.Group>
                                 <div className="text-danger mt-1">{errors?.paymentMode?.message}</div>
                             </div>
-                            <p className="text-black fw-light mt-5 mb-4">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+                            <p className="text-black fw-light mt-5 mb-4 dark-mode-text">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
                             <div className="mb-2 mt-2">
                                 <Button
                                     type="submit"
