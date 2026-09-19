@@ -8,7 +8,7 @@ export const BreadcrumbSection = ({ currentPage, hide = false, slug, showSlug = 
             <Container className="py-6 d-flex justify-content-start align-items-center flex-column">
                 <h1 className="fs-32 fw-bolder lh-sm text-black dark-mode-text">{currentPage}</h1>
                 <Nav aria-label="breadcrumb">
-                    <ol className="breadcrumb">
+                    <ol className="breadcrumb justify-content-center">
                         <li className="breadcrumb-item d-flex justify-content-center align-items-start"><Link href="/" className="p-0 text-decoration-none nav-link fs-14 fw-medium text-dark dark-mode-text">Home</Link></li>
                         <li className="breadcrumb-item active fs-14 fw-medium text-dark dark-mode-text" aria-current="page">{currentPage}</li>
                         {showSlug && Array.isArray(slug)
