@@ -1,8 +1,8 @@
 import React from 'react'
-import { Image } from 'react-bootstrap';
 import { ConvertToCurrency, toTitleCase } from '../../helper/utils';
 import AddToCart from '../common/AddToCart';
 import { AddToWishlist } from '../common/AddToWishlist';
+import Image from 'next/image';
 
 export const ProductInfo = ({ product }) => {
 
@@ -33,26 +33,36 @@ export const ProductInfo = ({ product }) => {
             src='/icons/star-yellowy.svg'
             alt=""
             className="icon--12px"
+            width={12}
+            height={12}
           />
           <Image
             src='/icons/star-yellowy.svg'
             alt=""
             className="icon--12px"
+            width={12}
+            height={12}
           />
           <Image
             src='/icons/star-yellowy.svg'
             alt=""
             className="icon--12px"
+            width={12}
+            height={12}
           />
           <Image
             src='/icons/star-yellowy.svg'
             alt=""
             className="icon--12px"
+            width={12}
+            height={12}
           />
           <Image
             src='/icons/star-yellowy.svg'
             alt=""
             className="icon--12px"
+            width={12}
+            height={12}
           />
           <p
             className="nav-link mb-0 fs-13 fw-normal text-nowrap"
@@ -80,30 +90,30 @@ export const ProductInfo = ({ product }) => {
           <Image
             src='/icons/facebook-grey.svg'
             alt=""
-            className="icon--12px"
-            style={{
-              height: "16px",
-              width: "16px"
-            }}
+            className="mini-logo"
+            width={16}
+            height={16}
           />
           <Image
             src='/icons/twitter-grey.svg'
             alt=""
-            className="icon--12px"
-            style={{
-              height: "16px",
-              width: "16px"
-            }}
+            className="mini-logo"
+            width={16}
+            height={16}
           />
           <Image
             src='/icons/pinterest-grey.svg'
             alt=""
-            className="icon--12px"
-            style={{ height: "16px", width: "16px" }}
+            className="mini-logo"
+            width={16}
+            height={16}
           />
           <Image
             src='/icons/instagram-grey.svg'
-            alt="" className="icon--12px" style={{ height: "16px", width: "16px" }} />
+            alt="" className="mini-logo"
+            width={16}
+            height={16}
+            />
         </div>
       </div>
       <div className="d-flex gap-3">

@@ -63,6 +63,10 @@
     color: #c8c6c6 !important;
   }
 
+  .bg-dark-mode{
+    background-color: var(--grey-bg-500);
+  }
+
   .search-icon-header{
     filter: brightness(0) invert(1) !important;
   }
@@ -77,6 +81,10 @@
     &::after{
       filter: brightness(0) invert(1) !important;
     }
+  }
+
+  .breadcrumb-item + .breadcrumb-item:before {
+    filter: brightness(0) invert(1) !important;
   }
 }
 

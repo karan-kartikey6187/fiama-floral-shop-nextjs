@@ -52,6 +52,14 @@
         hue-rotate(298deg) brightness(89%) contrast(161%) !important;
     }
   }
+
+  &--mini-logo {
+    cursor: pointer;
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(45%) sepia(79%) saturate(276%)
+        hue-rotate(298deg) brightness(89%) contrast(161%) !important;
+    }
+  }
 }
 
 .icon-box:hover,

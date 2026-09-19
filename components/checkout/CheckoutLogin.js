@@ -13,6 +13,8 @@ export const CheckoutLogin = () => {
 
     const [login, setLogin] = useState(false);
 
+    const [loading, setLoading] = useState(false)
+
     const [loginStatus, setLoginStatus] = useState(false);
 
     useEffect(() => {
@@ -40,12 +42,17 @@ export const CheckoutLogin = () => {
             }
 
         } catch (error) {
-            toast.error("Invalid Username or Password.");
+            // toast.error("Invalid Username or Password.");
         }
     };
 
 
     const handleSubmitForm = (data) => {
+        setLoading(true)
+
+        setTimeout(() => {
+            setLoading(false)
+        }, 3000)
         fetchUser(data)
     }
 
@@ -84,7 +91,7 @@ export const CheckoutLogin = () => {
                                 </Col>
                             </Row>
                             <div className="mb-2 d-flex align-items-center gap-1 flex-wrap">
-                                <Form.Control type="submit" name="contactSubmit" value="SUBMIT" className="proceed-btn btn rounded-0 checkout-btn fw-medium text-center px-6 py-2 w-25" style={{ minWidth: "160px", maxWidth: "220px" }}></Form.Control>
+                                <Form.Control type="submit" name="contactSubmit" value="SUBMIT" disabled={loading} className="proceed-btn btn rounded-0 checkout-btn fw-medium text-center px-6 py-2 w-25" style={{ minWidth: "160px", maxWidth: "220px" }}></Form.Control>
                                 <div className="d-flex align-items-center">
                                     <Form.Group className='d-flex align-items-center'>
                                         <Form.Check
@@ -98,7 +105,7 @@ export const CheckoutLogin = () => {
                                 </div>
                             </div>
                         </Form>
-                        <Link href="/auth/signin" className="mb-0 mt-3 fw-normal nav-link">Lost your password?</Link>
+                        <Link href="/signin" className="mb-0 mt-3 fw-normal nav-link">Lost your password?</Link>
                     </div>
                 </div>)}</>
                 <Coupon />

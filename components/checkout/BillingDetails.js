@@ -63,7 +63,7 @@ export const BillingDetails = () => {
         setLoading(true)
 
         setTimeout(() => {
-            setLoading(true)
+            setLoading(false)
         }, 3000)
 
         const isLogin = !!localStorage.getItem("id");

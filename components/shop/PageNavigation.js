@@ -13,7 +13,7 @@ export const PageNavigation = ({ currentPage,totalPages,onPageChange}) => {
     }
 
     return (
-        <section className="page-navigation mt-6 mb-7">
+        <section className="page-navigation mt-6 mb-6 mb-lg-7">
             <div className="container d-flex justify-content-center gap-2 align-items-center flex-wrap">
                 <div
                     className={`icon--50px-icon rounded rounded-circle bg-light-grey d-flex justify-content-center align-items-center ${

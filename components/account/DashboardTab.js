@@ -21,7 +21,7 @@ export const DashboardTab = () => {
     const handleLogout = () => {
         localStorage.removeItem("login")
         localStorage.removeItem("id")
-        router.push("/login")
+        router.push("/signin")
     }
 
     return (

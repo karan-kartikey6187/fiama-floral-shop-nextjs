@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Button, Image, Modal } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 
 
 export const WishlistModal = ({ show, handleClose, image, title = "Roses Surprise" }) => {
@@ -29,18 +30,19 @@ export const WishlistModal = ({ show, handleClose, image, title = "Roses Surpris
                             <Image
                                 src='/icons/remove-white.svg'
                                 alt="Close"
+                                height={20}
+                                width={20}
                             />
                         </Button>
                         <Image
                             src={image}
                             alt=""
-                            style={{
-                                width: "125px",
-                                height: "162px"
-                            }}
+                            width={160}
+                            height={160}
+                            className="img-fluid"
                         />
                         <div>
-                            <h2 className="mb-0 display-3 fw-medium text-black dark-mode-text">
+                            <h2 className="mb-0 display-3 fw-medium text-black dark-mode-text pe-3">
                                 {title}
                             </h2>
                             <div className="d-flex align-items-center mt-3">
@@ -52,7 +54,7 @@ export const WishlistModal = ({ show, handleClose, image, title = "Roses Surpris
                                         marginRight: "4px"
                                     }}
                                 >
-                                    <Image src='/icons/check.svg' alt="" />
+                                    <Image src='/icons/check.svg' alt="" height={16} width={16}/>
                                 </div>
                                 <p className="mb-0 fw-normal">
                                     Successfully added to your Wishlist
@@ -88,9 +90,11 @@ export const WishlistModal = ({ show, handleClose, image, title = "Roses Surpris
                             </p>
                             <div>
                                 <Image
-                                    fluid
                                     src='/images/payment.webp'
                                     alt=""
+                                    width={387}
+                                    height={22}
+                                    className="img-fluid"
                                 />
                             </div>
                         </div>

@@ -4,6 +4,11 @@ import { CartTotals } from '@/components/cart/CartTotals'
 import { ToastContainer } from 'react-toastify'
 import CartProductsList from '@/app/(dashboard)/cart/CartProductsList'
 
+export const metadata = {
+    title: "Cart",
+    description: "Review your selected flowers and proceed to checkout.",
+};
+
 const Cart = () => {
     return (
         <Fragment>

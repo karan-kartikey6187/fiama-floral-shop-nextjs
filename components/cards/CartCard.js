@@ -14,7 +14,7 @@ export const CartCard = ({ product }) => {
     return (
         <div className="cart-item d-flex flex-column flex-md-row justify-content-center align-items-center justify-content-md-around align-items-center">
             <div className="mx-1 py-3 w-100 d-flex justify-content-center align-items-center">
-                <Link href="/product-details">
+                <Link href={`/product-details/${product?.id}`}>
                     <Image src={product?.thumbnail} alt="" className="img-fluid cart-img" height={100} width={100}/>
                 </Link>
             </div>
@@ -25,8 +25,8 @@ export const CartCard = ({ product }) => {
             </div>
             <p className="mb-0 fw-bold px-1 py-3 w-100 text-center">{ConvertToCurrency(product?.totalPrice)}</p>
 
-            <div>
-                <Button size='md' variant='outline-danger' className='me-2 d-flex justify-content-center align-items-center'
+            <div className='my-3 border-bottom-0'>
+                <Button size='md' variant='outline-danger' className='d-flex justify-content-center align-items-center'
                     onClick={() => dispatch(removeFromCart(product?.id))}
                 >
                     <Trash style={{marginRight:"5px"}}/> Delete

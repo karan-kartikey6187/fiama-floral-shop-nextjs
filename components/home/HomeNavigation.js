@@ -36,7 +36,7 @@ export const HomeNavigation = () => {
 
   return (
     <div className="p-0 m-0">
-      <div className={`custom-nav-item position-relative d-flex justify-content-center align-items-center pt-5 border-bottom pb-2 w-100 d-none d-lg-flex  ${navBar ? "position-fixed fixed-top justify-content-between bg-white" : "position-relative"}`}>
+      <div className={`custom-nav-item position-relative d-flex justify-content-center align-items-center pt-5 border-bottom pb-2 w-100 d-none d-lg-flex ${navBar ? "position-fixed fixed-top justify-content-between bg-dark-mode" : "position-relative"}`}>
         <Container className={`d-flex justify-content-center align-items-center w-100  ${navBar ? "justify-content-between" : ""}`}>
           {navBar && <Image src='/logos/fiama-logo.webp' alt="Fiama Floral Shop Logo" width={120} height={31}/>}
           <Nav className="d-flex gap-5 mt-1 pb-1 justify-content-evenly">
@@ -58,7 +58,7 @@ export const HomeNavigation = () => {
 
               {activeDropdown === "pages" && (
                 <div
-                  className="custom-dropdown position-absolute pages-dropdown bg-white pt-4 ps-5 pe-4 d-flex translate-middle-x"
+                  className="custom-dropdown position-absolute pages-dropdown bg-dark-mode pt-4 ps-5 pe-4 d-flex translate-middle-x"
                   onMouseEnter={() => handleMouseEnter("pages")}
                   onMouseLeave={handleMouseLeave}
                 >

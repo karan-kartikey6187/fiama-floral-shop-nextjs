@@ -85,7 +85,7 @@ export const ShopProducts = () => {
                     </p>
                 </div>
 
-                <Row className="g-4" id="shop-products">
+                <Row className="g-4 mb-6 pb-5" id="shop-products">
                     {currentProducts.map((product) => {
                         return (
                             <ShopProductCard

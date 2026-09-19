@@ -77,6 +77,14 @@ export const createOrder = async (data) => {
 };
 
 export const getOrdersByUser = async (userId) => {
-    const response = await mockApi.get(`/orders?userId=${userId}`);
-    return response;
+     try {
+        const response = await mockApi.get(`/orders?userId=${userId}`);
+        return response;
+    } catch (error) {
+        if (error.response?.status === 404) {
+            return {
+                data: []
+            };
+        }
+    }
 };

@@ -42,7 +42,7 @@ export const AccountDetailsTab = () => {
                 localStorage.removeItem("id");
                 localStorage.removeItem("login");
 
-                router.push("/auth/signin");
+                router.push("/signin");
             }, 1000);
         }
     };
@@ -94,7 +94,7 @@ export const AccountDetailsTab = () => {
             setTimeout(() => {
                 localStorage.removeItem("id");
                 localStorage.removeItem("login");
-                router.push("/auth/signin");
+                router.push("/signin");
             }, 1000);
 
         } catch (error) {

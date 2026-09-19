@@ -7,7 +7,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Fiama Floral Shop",
+  title: {
+      default: "Fiama Floral Shop",
+  },
   description: "Fiama Floral Shop provides fresh flowers",
   keywords: [
       "Fiama Floral Shop",
@@ -16,6 +18,21 @@ export const metadata = {
       "Natural & Beautiful Flower Here",
       "Premium Flowers",
   ],
+  robots: {
+      index: false,
+      follow: false,
+  },
+  openGraph: {
+      title: "Fiama Floral Shop",
+      description: "Fiama Floral Shop provides fresh flowers",
+      type: "website",
+  },
+
+  twitter: {
+      card: "summary_large_image",
+      title: "Fiama Floral Shop",
+      description: "Fiama Floral Shop provides fresh flowers",
+  },
   icons: {
     icon: "/icons/favicon.ico",
   },

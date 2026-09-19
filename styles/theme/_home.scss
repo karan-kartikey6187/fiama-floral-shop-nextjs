@@ -1,6 +1,10 @@
 
 // Hero Section
 
+ .bg-dark-mode{
+    background-color: var(--white);
+  }
+
 .hero-next-btn,
 .hero-prev-btn {
   opacity: 0;

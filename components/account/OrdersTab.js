@@ -14,7 +14,7 @@ export const OrdersTab = () => {
 
         const fetchOrders = async () => {
             const response = await getOrdersByUser(userId);
-            setOrders(response.data);
+            setOrders(response?.data);
         };
 
         fetchOrders();

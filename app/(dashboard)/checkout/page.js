@@ -4,6 +4,11 @@ import { CheckoutLogin } from '@/components/checkout/CheckoutLogin'
 import { BillingDetails } from '@/components/checkout/BillingDetails'
 import { ToastContainer } from 'react-toastify'
 
+export const metadata = {
+    title: "Checkout",
+    description: "Complete your order at Fiama Floral Shop.",
+};
+
 const Checkout = () => {
   return (
     <Fragment>

@@ -1,5 +1,11 @@
-import { Fragment } from "react";
+import LoginRedirect from "@/components/auth/LoginRedirect";
+import { ToastContainer } from "react-toastify";
 
 export default function AuthLayout({ children }) {
-  return <Fragment>{children}</Fragment>;
+  return (
+    <LoginRedirect>
+      {children}
+      <ToastContainer />
+    </LoginRedirect>
+  );
 }

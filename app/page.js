@@ -13,6 +13,11 @@ import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
 import { BrandPartners } from "@/components/home/BrandPartners";
 
+export const metadata = {
+    title: "Home",
+    description: "Welcome to Fiama Floral Shop. Discover fresh and beautiful flowers.",
+};
+
 export default function Home() {
   return (
     <ReduxProvider>
