@@ -90,27 +90,27 @@ export const ProductInfo = ({ product }) => {
           <Image
             src='/icons/facebook-grey.svg'
             alt=""
-            className="mini-logo"
+            className="icon--mini-logo"
             width={16}
             height={16}
           />
           <Image
             src='/icons/twitter-grey.svg'
             alt=""
-            className="mini-logo"
+            className="icon--mini-logo"
             width={16}
             height={16}
           />
           <Image
             src='/icons/pinterest-grey.svg'
             alt=""
-            className="mini-logo"
+            className="icon--mini-logo"
             width={16}
             height={16}
           />
           <Image
             src='/icons/instagram-grey.svg'
-            alt="" className="mini-logo"
+            alt="" className="icon--mini-logo"
             width={16}
             height={16}
             />

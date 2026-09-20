@@ -1,3 +1,4 @@
+'use client'
 import { useState } from 'react'
 import { Badge, Button, Card} from 'react-bootstrap'
 import { WishlistModal } from '@/components/modals/WishlistModal'

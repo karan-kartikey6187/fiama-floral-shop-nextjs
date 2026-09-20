@@ -1,3 +1,4 @@
+'use client'
 import React, { Fragment, useEffect, useState } from 'react'
 import { Button, Form, InputGroup } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'

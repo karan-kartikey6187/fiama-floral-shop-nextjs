@@ -137,7 +137,6 @@ export const BillingDetails = () => {
 
             setTimeout(() => {
                 reset(emptyValues);
-                refFrom.current.reset();
             }, 600);
 
         } catch (error) {
@@ -150,13 +149,11 @@ export const BillingDetails = () => {
         dispatch(removeCoupon())
     }
 
-    const refFrom = useRef()
-
     return (
         <section className="billing-details mt-6 mb-7">
             <Container>
                 <h2 className="display-2 fw-medium pb-1 w-50 mb-5 border-bottom d-inline-block">Billing Details</h2>
-                <Form id="billingForm" className="mx-0 my-5" ref={refFrom} onSubmit={handleSubmit(handleSubmitForm)}>
+                <Form id="billingForm" className="mx-0 my-5" onSubmit={handleSubmit(handleSubmitForm)}>
                     <div className="p-5 border">
                         <Row className="billingFormWrapper">
                             <Col md={6} className="mb-6 fname-box position-relative">

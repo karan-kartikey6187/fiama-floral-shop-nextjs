@@ -1,4 +1,3 @@
-'use client'
 import React from "react";
 import { Container, Image } from "react-bootstrap";
 import "swiper/css";

@@ -171,3 +171,16 @@
   background-color: var(--bs-primary);
   border-color: var(--bs-primary);
 }
+
+.swiper-pagination-topProducts, .swiper-pagination-latestNews {
+  .swiper-pagination-bullet {
+    background-color: var(--white);
+    border: 1px solid var(--dark);
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--bs-primary);
+    border: 1px solid var(--bs-primary);
+    opacity: 1;
+  }
+}
