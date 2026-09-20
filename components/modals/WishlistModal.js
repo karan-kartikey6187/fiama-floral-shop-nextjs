@@ -63,7 +63,7 @@ export const WishlistModal = ({ show, handleClose, image, title = "Roses Surpris
                             <div className="mt-4 d-flex gap-2 flex-wrap flex-lg-nowrap">
                                 <Link
                                     href="/wishlist"
-                                    className="proceed-btn btn rounded-0 checkout-btn fs-14 fw-medium text-center px-3 py-1"
+                                    className="proceed-btn btn rounded-0 checkout-btn fs-14 fw-medium text-center px-3 py-1 dark-mode-text-dark"
                                     style={{ paddingBlock: "0.5rem" }}
                                 >
                                     View Wishlist

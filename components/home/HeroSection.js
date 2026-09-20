@@ -45,8 +45,8 @@ export const HeroSection = () => {
         <Carousel.Item className="text text-center hero-image-1">
           <Carousel.Caption bsPrefix=' ' className='my-6 mb-sm-7 mb-xl-6 mt-xl-7'>
             <Container className="my-8 text-start position-relative">
-              <h1 className="fw-bold mb-3 text-grey-normal">Fresh Flower</h1>
-              <h2 className="underline-start fw-medium h3 text-light-grey mb-5 ">Natural & Beautiful Flower Here</h2>
+              <h1 className="fw-bold mb-3 text-grey-normal hero-heading">Fresh Flower</h1>
+              <h2 className="underline-start fw-medium h3 text-light-grey mb-5 hero-heading">Natural & Beautiful Flower Here</h2>
               <p className="mb-0 mt-6 fw-lighter text-dark">Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br /> Quibusdam earum tempora consequuntur.</p>
               <Button variant='primary' className="shop-now-btn  rounded rounded-pill px-4 py-1 mt-4 position-relative"><Link href="/shop" className="text-white text-decoration-none stretched-link">Shop Now</Link></Button>
               <NextBtn carouselRef={carouselRef}/>
@@ -57,8 +57,8 @@ export const HeroSection = () => {
         <Carousel.Item className="text text-center hero-image-2">
           <Carousel.Caption bsPrefix=' ' className='my-6 mb-sm-7 mb-xl-6 mt-xl-7'>
             <Container className="my-8 text-start position-relative">
-              <h1 className="fw-bold mb-3 text-grey-normal">Fresh Flower</h1>
-              <h2 className="underline-start fw-medium h3 text-light-grey mb-5 0">Natural & Beautiful Flower Here</h2>
+              <h1 className="fw-bold mb-3 text-grey-normal hero-heading">Fresh Flower</h1>
+              <h2 className="underline-start fw-medium h3 text-light-grey mb-5 hero-heading">Natural & Beautiful Flower Here</h2>
               <p className="mb-0 mt-6 fw-lighter text-dark">Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br /> Quibusdam earum tempora consequuntur.</p>
               <Button variant='primary' className="shop-now-btn  rounded rounded-pill px-4 py-1 mt-4 position-relative"><Link href="/shop" className="text-white text-decoration-none stretched-link">Shop Now</Link></Button>
               <NextBtn carouselRef={carouselRef} />

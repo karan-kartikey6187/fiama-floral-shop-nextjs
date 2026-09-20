@@ -91,7 +91,7 @@ export const CheckoutLogin = () => {
                                 </Col>
                             </Row>
                             <div className="mb-2 d-flex align-items-center gap-1 flex-wrap">
-                                <Form.Control type="submit" name="contactSubmit" value="SUBMIT" disabled={loading} className="proceed-btn btn rounded-0 checkout-btn fw-medium text-center px-6 py-2 w-25" style={{ minWidth: "160px", maxWidth: "220px" }}></Form.Control>
+                                <Form.Control type="submit" name="contactSubmit" value="SUBMIT" disabled={loading} className="proceed-btn btn rounded-0 checkout-btn fw-medium text-center px-6 py-2 w-25 dark-mode-text-dark" style={{ minWidth: "160px", maxWidth: "220px" }}></Form.Control>
                                 <div className="d-flex align-items-center">
                                     <Form.Group className='d-flex align-items-center'>
                                         <Form.Check

@@ -59,7 +59,7 @@ export const CartTotals = () => {
                                             <div className="fw-semibold ps-1 py-2"><b>{ConvertToCurrency(cartState.orderTotal)}</b></div>
                                         </ListGroup.Item>
                                         <div className="w-100">
-                                            <Link href="/checkout" className="proceed-btn btn w-100 rounded-0 checkout-btn fw-medium text-center py-2">
+                                            <Link href="/checkout" className="proceed-btn btn w-100 rounded-0 checkout-btn fw-medium text-center py-2 dark-mode-text-dark">
                                                 Proceed to checkout
                                             </Link>
                                         </div>

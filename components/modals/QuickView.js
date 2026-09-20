@@ -38,7 +38,7 @@ export const QuickView = ({show, handleClose, product }) => {
                                     <p className="nav-link mb-0 fs-13 fw-normal text-nowrap" style={{ color: "gold", marginLeft: "2px" }}>( 95 Reviews )</p>
                                 </div>
                             </div>
-                            <p className="mb-5 fw-light text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos repellendus repudiandae incidunt quidem pariatur expedita, quo quis modi tempore non.</p>
+                            <p className="mb-5 fw-light text-black dark-mode-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos repellendus repudiandae incidunt quidem pariatur expedita, quo quis modi tempore non.</p>
                             <div className="d-flex gap-2 mb-5 flex-wrap">
                                 <AddToCart product={product} modal={true}/>
                                  <AddToWishlist product={product} modal={true}/>

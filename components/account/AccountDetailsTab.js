@@ -128,7 +128,7 @@ export const AccountDetailsTab = () => {
                             </div>
                             <Form.Control type="hidden" {...registerAccount("id")} />
                         </div>
-                        <Button type="submit" style={{ marginLeft: "-12px" }} className="proceed-btn btn rounded-0 checkout-btn fw-medium text-center py-2 px-6 mt-4">Update Profile</Button>
+                        <Button type="submit" style={{ marginLeft: "-12px" }} className="proceed-btn btn rounded-0 checkout-btn fw-medium text-center py-2 px-6 mt-4 dark-mode-text-dark">Update Profile</Button>
                     </Form>
                     <Form id="updatePasswordForm" onSubmit={handleSubmitPassword(handlePasswordSubmit)}>
                         <div className="row  border py-5 px-6 pt-3 mt-7">
@@ -149,7 +149,7 @@ export const AccountDetailsTab = () => {
                                 <div className="text-danger mt-1">{passwordErrors?.cnpassword?.message}</div>
                             </div>
                         </div>
-                        <Button type="submit" className="proceed-btn btn rounded-0 checkout-btn fw-medium text-center py-2 px-6 mt-4" style={{ marginLeft: "-12px" }}>Update Password</Button>
+                        <Button type="submit" className="proceed-btn btn rounded-0 checkout-btn fw-medium text-center py-2 px-6 mt-4 dark-mode-text-dark" style={{ marginLeft: "-12px" }}>Update Password</Button>
                     </Form>
                 </div>
             </div>

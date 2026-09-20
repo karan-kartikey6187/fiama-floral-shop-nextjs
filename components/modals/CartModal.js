@@ -62,7 +62,7 @@ export const CartModal = ({ show, handleClose, image, title = "Roses Surprise" }
                             <div className="mt-4 d-flex gap-2 flex-wrap flex-lg-nowrap">
                                 <Link
                                     href="/cart"
-                                    className="proceed-btn btn rounded-0 checkout-btn fs-14 fw-medium text-center px-3 py-1"
+                                    className="proceed-btn btn rounded-0 checkout-btn fs-14 fw-medium text-center px-3 py-1 dark-mode-text-dark"
                                     style={{ paddingBlock: "0.5rem" }}
                                 >
                                     View Cart

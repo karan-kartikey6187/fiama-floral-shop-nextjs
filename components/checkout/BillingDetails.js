@@ -350,7 +350,7 @@ export const BillingDetails = () => {
                                 <Button
                                     type="submit"
                                     disabled={loading}
-                                    className="proceed-btn btn rounded-0 checkout-btn fw-medium text-center px-6 py-2"
+                                    className="proceed-btn btn rounded-0 checkout-btn fw-medium text-center px-6 py-2 dark-mode-text-dark"
                                 >
                                     PLACE ORDER
                                 </Button>
