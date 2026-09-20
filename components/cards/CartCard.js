@@ -18,7 +18,7 @@ export const CartCard = ({ product }) => {
                     <Image src={product?.thumbnail} alt="" className="img-fluid cart-img" height={100} width={100}/>
                 </Link>
             </div>
-            <h2 className="display-3 px-1 py-3 mb-0 w-100 text-center"><p className="mb-0 nav-link text-nowrap fw-medium text-dark">{product?.title}</p></h2>
+            <h2 className="display-3 px-1 py-3 mb-0 w-100 text-center"><p className="mb-0 nav-link text-nowrap fw-medium text-dark dark-mode-text">{product?.title}</p></h2>
             <p className="mb-0 fs-14 fw-normal text-light-grey px-1 py-3 w-100 text-center">{ConvertToCurrency(product?.price)}</p>
             <div className="w-100 px-1 py-3 d-flex justify-content-center align-items-center">
                 <AddToCart product={product}/>

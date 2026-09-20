@@ -27,7 +27,7 @@ export const MoveToCart = ({ product }) => {
             <Button
                 variant="outline-light"
                 size='md'
-                className="rounded-0 text-nowrap mt-3 mt-md-0 ms-md-5"
+                className="rounded-0 text-nowrap mt-3 mt-md-0 ms-md-5 dark-mode-text"
                 onClick={handleMoveToCart}
             >
                 Move to Cart
