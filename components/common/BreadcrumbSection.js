@@ -10,7 +10,11 @@ export const BreadcrumbSection = ({ currentPage, hide = false, slug, showSlug = 
                 <Nav aria-label="breadcrumb">
                     <ol className="breadcrumb justify-content-center">
                         <li className="breadcrumb-item d-flex justify-content-center align-items-start"><Link href="/" className="p-0 text-decoration-none nav-link fs-14 fw-medium text-dark dark-mode-text">Home</Link></li>
-                        <Link href='/shop/beauty' className="breadcrumb-item active fs-14 fw-medium text-dark dark-mode-text text-decoration-none" aria-current="page">{currentPage}</Link>
+                        {showSlug ? 
+                        <Link href='/shop' className="breadcrumb-item active fs-14 fw-medium text-dark dark-mode-text text-decoration-none" aria-current="page">{currentPage}</Link>
+                        :
+                        <li className="breadcrumb-item active fs-14 fw-medium text-dark dark-mode-text" aria-current="page">{currentPage}</li>
+                        }
                         {showSlug && Array.isArray(slug)
                             ? slug.map((item, index) => (
                             index === slug.length - 1 ?
