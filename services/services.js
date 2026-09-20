@@ -50,6 +50,9 @@ export const getUser = async (data) => {
 };
 
 export const getUserById = async (id) => {
+     if (!id) {
+        return null;
+    }
     const response = await mockApi.get("/users/" + id)
     return response
 };

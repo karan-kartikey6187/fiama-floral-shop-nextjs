@@ -77,7 +77,7 @@ export const Header = () => {
       <div>
         <div className='border-bottom'>
           <Container>
-            <Navbar expand="lg" className="mb-4 mt-6 justify-content-between align-items-center flex-column flex-sm-row">
+            <Navbar expand="lg" className="mb-4 mt-1 justify-content-between align-items-center flex-column flex-sm-row">
               <Navbar.Brand><Link href="/"><Image src='/logos/fiama-logo.webp' alt="Fiama Floral Shop Logo" width={120} height={31}/></Link></Navbar.Brand>
               <Navbar.Offcanvas
                 id={"offcanvasNavbar-expand-lg"}

@@ -14,7 +14,7 @@ export const OrdersTab = () => {
 
         const fetchOrders = async () => {
             const response = await getOrdersByUser(userId);
-            setOrders(response?.data);
+            setOrders(response?.data || []);
         };
 
         fetchOrders();
@@ -22,7 +22,7 @@ export const OrdersTab = () => {
 
     return (
         <Tab.Pane eventKey="2">
-            {orders.length === 0 ?
+            {orders?.length === 0 ?
                 <Fragment>
                     <p className=' text-center text-danger fs-3 fw-semibold mt-7'>You haven't placed any orders yet.</p>
                 </Fragment>
@@ -39,17 +39,17 @@ export const OrdersTab = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {orders.map((order, index) => (
-                                <tr key={order.id}>
-                                    <td className="p-2 fw-normal"><p className='mb-0 ms-3'>{order.id}</p></td>
-                                    <td className="p-2 fw-normal text-nowrap">{new Date(order.createdAt).toLocaleDateString("en-US", {
+                            {orders?.map((order) => (
+                                <tr key={order?.id}>
+                                    <td className="p-2 fw-normal"><p className='mb-0 ms-3'>{order?.id}</p></td>
+                                    <td className="p-2 fw-normal text-nowrap">{new Date(order?.createdAt).toLocaleDateString("en-US", {
                                         month: "short",
                                         day: "numeric",
                                         year: "numeric"
                                     })}</td>
-                                    <td className="p-2 fw-normal">{order.orderStatus}</td>
-                                    <td className="p-2 fw-normal">${order.totalAmount}</td>
-                                    <td className="p-2 fw-normal" role='button' onClick={() => router.push(`/order-details/${order.id}`)}><p className='p-0 m-0 nav-link'>View</p></td>
+                                    <td className="p-2 fw-normal">{order?.orderStatus}</td>
+                                    <td className="p-2 fw-normal">${order?.totalAmount}</td>
+                                    <td className="p-2 fw-normal" role='button' onClick={() => router.push(`/order-details/${order?.id}`)}><p className='p-0 m-0 nav-link'>View</p></td>
                                 </tr>
                             ))}
                         </tbody>
