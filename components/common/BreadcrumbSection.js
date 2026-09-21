@@ -33,12 +33,14 @@ export const BreadcrumbSection = ({ currentPage, hide = false, slug, showSlug = 
                                 </Link>)
                             ))
                             :
-                            showSlug ?
-                                <li 
-                                className="breadcrumb-item active fs-14 fw-medium text-dark dark-mode-text"
-                                aria-current="page"
-                                >{slug ? toTitleCase(slug) : "Beauty"}
-                                </li> : " "
+                            showSlug && slug ? (
+                                <li
+                                    className="breadcrumb-item active fs-14 fw-medium text-dark dark-mode-text"
+                                    aria-current="page"
+                                >
+                                    {toTitleCase(slug)}
+                                </li>
+                            ) : null
                         }
                     </ol>
                 </Nav>

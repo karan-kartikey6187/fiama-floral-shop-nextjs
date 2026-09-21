@@ -16,7 +16,7 @@ import Link from 'next/link';
 import { ConvertToCurrency } from '@/helper/utils';
 import Image from 'next/image';
 import useMounted from '@/hooks/useMounted';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 
 export const Header = () => {
@@ -71,6 +71,39 @@ export const Header = () => {
     }
 }, [darkMode, themeLoaded]);
 
+const searchParams = useSearchParams();
+
+const [search, setSearch] = useState("");
+
+useEffect(() => {
+    const searchValue = searchParams.get("search") || "";
+    setSearch(searchValue);
+
+}, [searchParams]);
+
+const handleSearch = (e) => {
+    e.preventDefault();
+
+    if (search.trim()) {
+        router.push(`/shop?search=${encodeURIComponent(search.trim())}`);
+    } 
+  };
+
+const handleChange = (e) => {
+      const value = e.target.value;
+
+      setSearch(value);
+
+      if (!value.trim()) {
+          router.push("/shop");
+      }
+  };
+
+  const handleSubmit = (e) => {
+    handleSearch(e);
+    handleNavClick();
+  };
+
   return (
     <Fragment>
     {hasMounted && 
@@ -103,16 +136,16 @@ export const Header = () => {
                     </div>
                   </div>
                   <div className="search-bar p-1 border border-1 d-none d-lg-flex d-flex align-items-center rounded rounded-5">
-                    <Form className="d-flex border-0 w-100" role="search">
-                      <Form.Control className="me-2 border-0 fw-normal" type="search" placeholder="Search here..." />
+                    <Form className="d-flex border-0 w-100" role="search" onSubmit={handleSearch}>
+                      <Form.Control className="me-2 border-0 fw-normal" type="search" placeholder="Search here..." onChange={handleChange} value={search}/>
                       <Button variant='transparent' className="border-0" type="submit">
                         <Image src='/icons/search.svg' alt="Search" className='search-icon-header' width={16} height={16}/>
                       </Button>
                     </Form>
                   </div>
                   <div className="search-bar-offcanvas p-1 d-lg-none d-flex align-items-center rounded rounded-1 bg-body-tertiary mt-2">
-                    <Form className="d-flex border-0 w-100 justify-content-center" role="search">
-                      <Form.Control className="form-control me-2 border-0 bg-body-tertiary fw-normal" type="search" placeholder="Search here..." />
+                    <Form className="d-flex border-0 w-100 justify-content-center" role="search" onSubmit={handleSubmit}>
+                      <Form.Control className="form-control me-2 border-0 bg-body-tertiary fw-normal" type="search" placeholder="Search here..." onChange={handleChange} value={search}/>
                       <Button variant='transparent' className="border-0 bg-transparent" type="submit">
                         <Image src='/icons/search.svg' alt="Search" className='search-icon-header' width={16} height={16}/>
                       </Button>

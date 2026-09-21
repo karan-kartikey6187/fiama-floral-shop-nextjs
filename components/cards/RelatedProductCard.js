@@ -31,7 +31,7 @@ export const RelatedProductCard = ({ product }) => {
                         </div>
                         <Link href={`/product-details/${product?.id}`}><Image width={317} height={317} src={product?.thumbnail} className="card-img-top img-fluid" alt="" /></Link>
                     </Card.Body>
-                    <Card.Footer className="bg-light-subtle bg-white d-flex flex-column ps-0 align-items-start position-relative border-0">
+                    <Card.Footer className="bg-light-subtle bg-white d-flex flex-column ps-0 align-items-start position-relative border-0 ps-1">
                         <div className="mb-1 position-relative">
                             <Image src='/icons/star.svg' width={12} height={12} alt="" className="icon--12px me-4px" />
                             <Image src='/icons/star.svg' width={12} height={12} alt="" className="icon--12px me-4px" />

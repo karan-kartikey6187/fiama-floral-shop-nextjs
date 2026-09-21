@@ -5,11 +5,15 @@ export const metadata = {
     description: "Shop fresh and beautiful flowers at Fiama Floral Shop.",
 };
 
-const Shop = async ({ params }) => {
+const Shop = async ({ params, searchParams  }) => {
 
   const { slug } = await params;
 
-  return <ShopPage slug={slug}/>;
+  const paramsData = await searchParams;
+
+  const search = paramsData?.search || "";
+
+  return <ShopPage  slug={slug} search={search}/>;
 };
 
 export default Shop;

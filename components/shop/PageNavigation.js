@@ -8,8 +8,35 @@ export const PageNavigation = ({ currentPage,totalPages,onPageChange}) => {
 
     const pageNumbers = []
 
-    for (let page = 1; page <= totalPages; page++) {
-        pageNumbers.push(page)
+    if (totalPages <= 5) {
+        for (let page = 1; page <= totalPages; page++) {
+            pageNumbers.push(page)
+        }
+    } else {
+
+        pageNumbers.push(1)
+
+        if (currentPage > 3) {
+            pageNumbers.push("...")
+        }
+
+        if (currentPage <= 2) {
+            pageNumbers.push(2)
+            pageNumbers.push(3)
+        } else if (currentPage >= totalPages - 1) {
+            pageNumbers.push(totalPages - 2)
+            pageNumbers.push(totalPages - 1)
+        } else {
+            pageNumbers.push(currentPage - 1)
+            pageNumbers.push(currentPage)
+            pageNumbers.push(currentPage + 1)
+        }
+
+        if (currentPage < totalPages - 2) {
+            pageNumbers.push("...")
+        }
+
+        pageNumbers.push(totalPages)
     }
 
     return (
@@ -32,7 +59,19 @@ export const PageNavigation = ({ currentPage,totalPages,onPageChange}) => {
                     />
                 </div>
 
-                {pageNumbers.map((page) => {
+                {pageNumbers.map((page, index) => {
+
+                    if (page === "...") {
+                        return (
+                            <div
+                                key={`dots-${index}`}
+                                className="icon--50px-icon rounded rounded-circle d-flex justify-content-center align-items-center text-light-grey bg-light-grey"
+                            >
+                                ...
+                            </div>
+                        )
+                    }
+
                     return (
                         <div
                             key={page}

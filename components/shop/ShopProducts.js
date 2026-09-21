@@ -1,15 +1,25 @@
-import { getListProducts } from "@/services/services";
+import { getListProducts, getProducts } from "@/services/services";
 import ShopProductsMain from "./ShopProductsMain";
 
-export const ShopProducts = async ({ slug }) => {
+export const ShopProducts = async ({ slug, search  }) => {
 
-    const categorySlug = slug || "beauty";
+     let products = [];
 
-    let products = [];
+    if (slug) {
+        const response = await getListProducts(slug);
 
-    const response = await getListProducts(categorySlug);
+        products = response?.data?.products || [];
+    } else {
+        const response = await getProducts();
 
-    products = response?.data?.products || [];
+        products = response?.data?.products || [];
+    }
+
+    if (search) {
+        products = products.filter((product) =>
+            product.title.toLowerCase().includes(search.toLowerCase())
+        );
+    }
 
     return (
         <ShopProductsMain products={products} />
