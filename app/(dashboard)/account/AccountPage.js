@@ -20,7 +20,11 @@ const AccountPage = () => {
   }
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback=
+    {<div className="vh-100 d-flex flex-column justify-content-center align-items-center">
+      <div className="spinner-border text-danger" role="status"></div>
+      <p className="mt-3 mb-0 fw-semibold text-muted">Loading...</p>
+    </div>}>
       <ProtectedRoute>
         <Fragment>
           <BreadcrumbSection currentPage="My Account" showSlug={false} />
