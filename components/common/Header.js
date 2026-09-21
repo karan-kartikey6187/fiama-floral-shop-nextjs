@@ -16,7 +16,7 @@ import Link from 'next/link';
 import { ConvertToCurrency } from '@/helper/utils';
 import Image from 'next/image';
 import useMounted from '@/hooks/useMounted';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 
 export const Header = () => {
@@ -37,8 +37,15 @@ export const Header = () => {
 
   const router = useRouter()
 
+  const pathname = usePathname();
+
   const hasMounted = useMounted();
 
+  useEffect(() => {
+    if (pathname !== "/shop" && !pathname.startsWith("/shop/")) {
+        setSearch("");
+    }
+  }, [pathname]);
 
   const handleThemeMode = () => {
     setDarkMode((prev) => !prev);
@@ -71,15 +78,7 @@ export const Header = () => {
     }
 }, [darkMode, themeLoaded]);
 
-const searchParams = useSearchParams();
-
 const [search, setSearch] = useState("");
-
-useEffect(() => {
-    const searchValue = searchParams.get("search") || "";
-    setSearch(searchValue);
-
-}, [searchParams]);
 
 const handleSearch = (e) => {
     e.preventDefault();

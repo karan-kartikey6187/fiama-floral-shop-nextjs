@@ -1,6 +1,5 @@
 import { getCategory, getProducts } from "@/services/services";
-import SidebarCategories from "./SidebarCategories";
-
+import SidebarCategoriesWrapper from "./SidebarCategoriesWrapper";
 
 export const Sidebar = async ({ search }) => {
     
@@ -20,5 +19,5 @@ export const Sidebar = async ({ search }) => {
         );
     }
 
-    return <SidebarCategories categories={categories} products={products}/>;
+    return <SidebarCategoriesWrapper categories={categories} products={products}/>;
 };
