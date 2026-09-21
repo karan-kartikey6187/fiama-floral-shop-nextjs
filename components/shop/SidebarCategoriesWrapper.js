@@ -2,6 +2,7 @@
 import { Suspense } from "react";
 import SidebarCategories from "./SidebarCategories";
 
+
 const SidebarCategoriesWrapper = ({ categories, products }) => {
     return (
         <Suspense fallback={null}>
