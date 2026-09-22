@@ -52,7 +52,7 @@ const OrderDetails = () => {
                                         </p>
                                     </Col>
                                     <Col md={6} className="text-md-end mt-3 mt-md-0">
-                                        <Button size="lg" className="mb-3 fw-semibold" variant="outline-success" onClick={() => router.push("/account")} >Back</Button>
+                                        <Button size="lg" className="mb-3 fw-semibold white-text-btn" variant="outline-primary" onClick={() => router.push("/account")} >Back</Button>
                                         <p className="mb-2 fs-4">Order Date:&nbsp;&nbsp;{new Date(order?.createdAt).toLocaleDateString("en-US", {
                                             month: "short",
                                             day: "2-digit",

@@ -184,3 +184,9 @@
     opacity: 1;
   }
 }
+
+a{
+  &:focus, &:active{
+    color: var(--bs-primary) !important;
+  }
+}

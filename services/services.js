@@ -7,23 +7,55 @@ export const api = axios.create({
 })
 
 export const getProducts = async () => {
-    const response = await api.get("/products?limit=200")
-    return response;
+     try {
+        const response = await api.get("/products?limit=200")
+        return response;
+        
+    } catch (error) {
+        return {
+            data: {
+                products: []
+            }
+        };
+    }
 }
 
 export const getProduct = async (id) => {
-    const response = await api.get(`/products/${id}`)
-    return response;
+    try {
+        const response = await api.get(`/products/${id}`)
+        return response;
+
+    } catch (error) {
+        return {
+            data: null
+        };
+    }
 }
 
 export const getCategory = async () => {
-    const response = await api.get("/products/categories");
-    return response;
+    try {
+        const response = await api.get("/products/categories");
+        return response;
+
+    } catch (error) {
+        return {
+            data: []
+        };
+    }
 };
 
 export const getListProducts = async (categorySlug) => {
-    const response = await api.get(`/products/category/${categorySlug}`);
-    return response;
+    try {
+        const response = await api.get(`/products/category/${categorySlug}`);
+        return response;
+
+    } catch (error) {
+        return {
+            data: {
+                products: []
+            }
+        };
+    }
 };
 
 
@@ -35,48 +67,104 @@ export const mockApi = axios.create({
 
 
 export const getUsers = async () => {
-    const response = await mockApi.get("/users")
-    return response;
+    try {
+        const response = await mockApi.get("/users")
+        return response;
+
+    } catch (error) {
+        return {
+            data: []
+        };
+    }
 };
 
 export const createUser = async (data) => {
-    const response = await mockApi.post("/users", data)
-    return response
+     try {
+        const response = await mockApi.post("/users", data)
+        return response;
+
+    } catch (error) {
+        return {
+            data: null
+        };
+    }
 };
 
 export const getUser = async (data) => {
-    const response = await mockApi.get("/users?email=" + data.email)
-    return response
+    try {
+        const response = await mockApi.get("/users?email=" + data.email)
+        return response;
+
+    } catch (error) {
+        return {
+            data: []
+        };
+    }
 };
 
 export const getUserById = async (id) => {
-     if (!id) {
-        return null;
+    try {
+        if (!id) {
+            return null;
+        }
+        const response = await mockApi.get("/users/" + id)
+        return response;
+
+    } catch (error) {
+        return {
+            data: null
+        };
     }
-    const response = await mockApi.get("/users/" + id)
-    return response
+
 };
 
 export const updateUser = async (data) => {
-    const response = await mockApi.put("/users/" + data.id, data)
-    return response
+    try {
+        const response = await mockApi.put("/users/" + data.id, data)
+        return response;
+
+    } catch (error) {
+        return {
+            data: null
+        };
+    }
 };
 
 
 // Orders - MockAPI
 export const getOrder = async (id) => {
-    const response = await mockApi.get(`/orders/${id}`);
-    return response;
+     try {
+        const response = await mockApi.get(`/orders/${id}`);
+        return response;
+
+    } catch (error) {
+        return {
+            data: null
+        };
+    }
 };
 
 export const getOrderItems = async (orderId) => {
-    const response = await mockApi.get(`/orderItems?orderId=${orderId}`);
-    return response;
+    try {
+        const response = await mockApi.get(`/orderItems?orderId=${orderId}`);
+        return response;
+
+    } catch (error) {
+        return {
+            data: []
+        };
+    }
 };
 
 export const createOrder = async (data) => {
-    const response = await mockApi.post("/orders", data);
-    return response;
+    try {
+        const response = await mockApi.post("/orders", data);
+        return response;
+    } catch (error) {
+        return {
+            data: null
+        };
+    }
 };
 
 export const getOrdersByUser = async (userId) => {

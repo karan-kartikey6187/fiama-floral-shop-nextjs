@@ -40,7 +40,7 @@ export const RelatedProductCard = ({ product }) => {
                             <Image src='/icons/star.svg' width={12} height={12} alt="" className="icon--12px me-4px" />
                         </div>
                         <Link href={`/product-details/${product?.id}`} className="card-text d-inline-block text-decoration-none display-5 text-dark fw-normal text-uppercase nav-link fs-14 fw-normal dark-mode-text" style={{ marginBottom: "10px" }}>{product?.title}</Link>
-                        <Link href={`/product-details/${product?.id}`} className="card-text mb-0 text-light-grey fw-semibold pt-1 border-top w-100 text-decoration-none">{ConvertToCurrency(product?.price)}</Link>
+                        <Link href={`/product-details/${product?.id}`} className="card-text mb-0 text-light-grey fw-semibold pt-1 border-top w-100 text-decoration-none mt-auto">{ConvertToCurrency(product?.price)}</Link>
                     </Card.Footer>
                 </Card>
                 <WishlistModal

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Col, Container, Row, ToastContainer } from 'react-bootstrap'
+import { Button, Col, Container, Row, ToastContainer } from 'react-bootstrap'
 import { ShopProducts } from '@/components/shop/ShopProducts'
 import { Sidebar } from '@/components/shop/Sidebar'
 import { BreadcrumbSection } from '@/components/common/BreadcrumbSection'
@@ -35,8 +35,16 @@ const ShopPage = async ({ slug, search  }) => {
         />
 
         <Container>
-          <div className="text-center py-7 text-danger">
-            <h3 className='fs-2 fw-semibold'>No Items Found</h3>
+          <div className="text-center py-7">
+            <h3 className='fs-2 fw-semibold text-danger'>No Items Found <span className='text-dark'>"{search}"</span></h3>
+            <Button
+              size='lg'
+              variant="outline-primary"
+              className="mt-3 white-text-btn fw-semibold"
+              href="/shop"
+            >
+              Clear Search
+            </Button>
           </div>
         </Container>
 
