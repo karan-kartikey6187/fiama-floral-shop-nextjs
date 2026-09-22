@@ -35,7 +35,7 @@ const ShopProductsMain = ({ products }) => {
     return (
         <Fragment>
 
-            <section className="shop-products-section mt-7 mb-0 mb-lg-7">
+            <section className="shop-products-section mt-0 mt-lg-7 mb-0 mb-lg-7">
 
                 <Container>
 
