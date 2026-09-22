@@ -19,9 +19,9 @@ export const RelatedProductCard = ({ product }) => {
     const [showQuickViewModal, setshowQuickViewModal] = useState(false);
 
     return (
-        <div className="swiper-slide">
-            <div className="new-arrival-card position-relative">
-                <Card className="card border-0 rounded-0 position-relative w-100">
+        <div className="swiper-slide h-100">
+            <div className="new-arrival-card position-relative h-100">
+                <Card className="card border-0 rounded-0 position-relative d-flex flex-column w-100 h-100">
                     <Card.Body className="card-image bg-body-secondary p-0 position-relative overflow-hidden">
                         <Badge bg="primary" className="px-3 py-1 rounded-0 position-absolute fw-bold" style={{ top: "18px" }}>{Math.trunc(product?.discountPercentage)}%</Badge>
                         <div className="card-options btn-group position-absolute bg-light-grey-800 w-100 end-0 bottom-0 rounded-0">
@@ -31,7 +31,7 @@ export const RelatedProductCard = ({ product }) => {
                         </div>
                         <Link href={`/product-details/${product?.id}`}><Image width={317} height={317} src={product?.thumbnail} className="card-img-top img-fluid" alt="" /></Link>
                     </Card.Body>
-                    <Card.Footer className="bg-light-subtle bg-white d-flex flex-column ps-0 align-items-start position-relative border-0 ps-1">
+                    <Card.Footer className="bg-light-subtle bg-white d-flex flex-column ps-0 align-items-start position-relative border-0 ps-1 flex-grow-1">
                         <div className="mb-1 position-relative">
                             <Image src='/icons/star.svg' width={12} height={12} alt="" className="icon--12px me-4px" />
                             <Image src='/icons/star.svg' width={12} height={12} alt="" className="icon--12px me-4px" />

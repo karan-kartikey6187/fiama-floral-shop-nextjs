@@ -97,3 +97,20 @@
   height: 600px;
   object-fit: contain;
 }
+
+
+.relatedProductsSwiper, .topProductsSwiper-wrapperr {
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .swiper-slide {
+        height: auto;
+        display: flex;
+    }
+
+    .new-arrival-card, .product-card{
+        width: 100%;
+        height: 100%;
+    }
+}

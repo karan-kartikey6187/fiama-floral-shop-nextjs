@@ -31,7 +31,7 @@ const RelatedProductsSwiper = ({ products }) => {
             }}
         >
             {products?.slice(13, 26)?.map((card) => (
-                <SwiperSlide key={card.id} className="h-100">
+                <SwiperSlide key={card.id}>
                     <RelatedProductCard
                         swiper={true}
                         product={card}
