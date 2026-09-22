@@ -232,36 +232,37 @@ export const BillingDetails = () => {
                                 </Form.Group>
                             </Col>
                             <Col md={6} className="d-none d-md-block"></Col>
-                            <Row>
+                            <div>
                                 <Form.Label className="display-4 fw-medium mb-3 ">Your Complete Address</Form.Label>
-                                <Col md={6} className="mb-6">
-                                    <Form.Group className="mb-3">
-                                        <Form.Control
-                                            type='text'
-                                            rows={3}
-                                            {...register("address")}
-                                            placeholder="House number and street name"
-                                            className="w-100 bg-light-grey py-1 border-0 px-3 py-2 rounded-0 display-4 fw-light"
-                                        />
-
-                                        <div className="text-danger mt-1">
-                                            {errors?.address?.message}
-                                        </div>
-                                    </Form.Group>
-                                </Col>
-                                <Col md={6} className="mb-6">
-                                    <Form.Group className="mb-3">
-                                        <Form.Control
-                                            type='text'
-                                            rows={3}
-                                            id="apartmentAddress"
-                                            {...register("apartment")}
-                                            placeholder="Apartment, suite, unit etc. (optional)"
-                                            className="w-100 bg-light-grey py-1 border-0 px-3 py-2 rounded-0 display-4 fw-light"
-                                        />
-                                    </Form.Group>
-                                </Col>
-                            </Row>
+                                <Row>
+                                   <Col md={6} className="mb-6">
+                                       <Form.Group className="mb-3">
+                                           <Form.Control
+                                               type='text'
+                                               rows={3}
+                                               {...register("address")}
+                                               placeholder="House number and street name"
+                                               className="w-100 bg-light-grey py-1 border-0 px-3 py-2 rounded-0 display-4 fw-light"
+                                           />   
+                                           <div className="text-danger mt-1">
+                                               {errors?.address?.message}
+                                           </div>
+                                       </Form.Group>
+                                   </Col>
+                                   <Col md={6} className="mb-6">
+                                       <Form.Group className="mb-3">
+                                           <Form.Control
+                                               type='text'
+                                               rows={3}
+                                               id="apartmentAddress"
+                                               {...register("apartment")}
+                                               placeholder="Apartment, suite, unit etc. (optional)"
+                                               className="w-100 bg-light-grey py-1 border-0 px-3 py-2 rounded-0 display-4 fw-light"
+                                           />
+                                       </Form.Group>
+                                   </Col>
+                                </Row>
+                            </div>
                             <Col md={6} lg={4} className="mb-6">
                                 <Form.Group className="mb-3">
                                     <Form.Label className="display-4 fw-medium mb-3 d-block">Town / City</Form.Label>
