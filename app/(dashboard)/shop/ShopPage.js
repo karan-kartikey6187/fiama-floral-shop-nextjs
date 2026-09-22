@@ -36,7 +36,7 @@ const ShopPage = async ({ slug, search  }) => {
 
         <Container>
           <div className="text-center py-7">
-            <h3 className='fs-2 fw-semibold text-danger'>No Items Found <span className='text-dark'>"{search}"</span></h3>
+            <h3 className='fs-2 fw-semibold text-danger'>No Items Found <span className='text-dark dark-mode-text'>"{search}"</span></h3>
             <Button
               size='lg'
               variant="outline-primary"
