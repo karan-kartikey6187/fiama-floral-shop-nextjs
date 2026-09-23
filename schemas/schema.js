@@ -122,7 +122,7 @@ export const schema = yup.object({
   address: yup
     .string()
     .required("Address is required.")
-    .min(10, "Address must be at least 10 characters."),
+    .min(3, "Address must be at least 3 characters."),
 
   pincode: yup
     .string()
