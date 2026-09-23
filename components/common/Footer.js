@@ -1,6 +1,7 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { Image, Nav } from 'react-bootstrap'
+import { Nav } from 'react-bootstrap'
 
 
 export const Footer = () => {
@@ -53,10 +54,10 @@ export const Footer = () => {
              <strong className="text-white fw-medium text-uppercase mb-4 pe-7 text-nowrap">About Our Shop</strong>
              <Nav className="d-flex flex-column gap-3 mt-2">
                  <p className="text-light-grey-800 fs-14 text-decoration-none fw-normal text-sm-start text-wrap mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo incididunt ut labore et dolore</p>
-                 <div className="d-flex align-items-center gap-1"><Image src='/icons/location-grey.svg' alt=""/><address className="text-light-grey-800 fs-14 fw-normal text-sm-start mb-0">Brooklyn, New York, United States</address></div>
-                 <div className="d-flex align-items-center gap-1"><Image src='/icons/telephone-grey.svg' alt=""/><Link href="tel:+88015-88888-9999" className="text-light-grey-800 p-0 nav-link fw-normal text-decoration-none">+88015-88888-9999</Link></div>
-                 <div className="d-flex align-items-center gap-1"><Image src='/icons/envelope-grey.svg' alt=""/><Link href="mailto: example@gmail.com" className="text-light-grey-800 p-0 nav-link fw-normal text-decoration-none">example@example.com</Link></div>
-                 <Image src='/images/footer-payment-img.webp' alt="" style={{width:" 197px", height: "20px"}}/>
+                 <div className="d-flex align-items-center gap-1"><Image src='/icons/location-grey.svg' alt="" height={16} width={16}/><address className="text-light-grey-800 fs-14 fw-normal text-sm-start mb-0">Brooklyn, New York, United States</address></div>
+                 <div className="d-flex align-items-center gap-1"><Image src='/icons/telephone-grey.svg' alt="" height={16} width={16}/><Link href="tel:+88015-88888-9999" className="text-light-grey-800 p-0 nav-link fw-normal text-decoration-none">+88015-88888-9999</Link></div>
+                 <div className="d-flex align-items-center gap-1"><Image src='/icons/envelope-grey.svg' alt="" height={16} width={16}/><Link href="mailto: example@gmail.com" className="text-light-grey-800 p-0 nav-link fw-normal text-decoration-none">example@example.com</Link></div>
+                 <Image src='/images/footer-payment-img.webp' alt="" width={197} height={20}/>
              </Nav>
          </div>
         </div>
@@ -67,10 +68,10 @@ export const Footer = () => {
         <div className="d-flex flex-column align-items-center justify-content-center flex-md-row justify-content-md-between py-2 gap-2 gap-md-0">
           <p className="text-light-grey-800 mb-0 fs-13 fw-light">© 2026 - Just For You</p>
           <div className="d-flex gap-3 ">
-            <Image src='/icons/facebook-grey.svg' alt="" className="icon--12px"/>
-            <Image src='/icons/twitter-grey.svg' alt="" className="icon--12px"/>
-            <Image src='/icons/pinterest-grey.svg' alt="" className="icon--12px"/>
-            <Image src='/icons/instagram-grey.svg' alt="" className="icon--12px"/>
+            <Image src='/icons/facebook-grey.svg' alt="" className="icon--12px" height={12} width={12}/>
+            <Image src='/icons/twitter-grey.svg' alt="" className="icon--12px" height={12} width={12}/>
+            <Image src='/icons/pinterest-grey.svg' alt="" className="icon--12px" height={12} width={12}/>
+            <Image src='/icons/instagram-grey.svg' alt="" className="icon--12px" height={12} width={12}/>
           </div>
           <div className="d-none d-md-block"></div>
         </div>

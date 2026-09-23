@@ -1,7 +1,8 @@
-import { Button, Image } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { addToWishlist } from "../../store/slices/wishlistSlice";
 import { useDispatch, useSelector } from "react-redux";
+import Image from "next/image";
 
 export const AddToWishlist = ({ product, onClick, modal = false }) => {
 
@@ -39,7 +40,7 @@ export const AddToWishlist = ({ product, onClick, modal = false }) => {
             className={modal ? "text-dark bg-primary rounded-0 py-1" : "rounded-0 py-2"}
             onClick={handleAddToWishlist}
         >
-            <Image src='/icons/heart-white.svg' alt="Add to wishlist" />
+            <Image src='/icons/heart-white.svg' alt="Add to wishlist" height={16} width={16}/>
         </Button>
     );
 };
