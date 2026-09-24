@@ -14,7 +14,7 @@ export const LatestNewsCard = ({image}) => {
                 <div className="d-flex gap-4 mb-3">
                     <h3 className="display-5 fw-medium text-light-grey mb-0">Nov 18, 2020</h3>
                     <div className="icon-comment d-flex gap-1 align-items-center">
-                        <Image src='/icons/chat-left-text.svg' alt="" width={16} height={16} className="icon-link"/>
+                        <Image src='/icons/chat-left-text.svg' alt="" width={16} height={16} className="icon-link chat-left-icon"/>
                             <p className="display-5 mb-0 fw-medium text-light-grey">2</p>
                     </div>
                 </div>

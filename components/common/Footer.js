@@ -68,10 +68,10 @@ export const Footer = () => {
         <div className="d-flex flex-column align-items-center justify-content-center flex-md-row justify-content-md-between py-2 gap-2 gap-md-0">
           <p className="text-light-grey-800 mb-0 fs-13 fw-light">© 2026 - Just For You</p>
           <div className="d-flex gap-3 ">
-            <Image src='/icons/facebook-grey.svg' alt="" className="icon--12px" height={12} width={12}/>
-            <Image src='/icons/twitter-grey.svg' alt="" className="icon--12px" height={12} width={12}/>
-            <Image src='/icons/pinterest-grey.svg' alt="" className="icon--12px" height={12} width={12}/>
-            <Image src='/icons/instagram-grey.svg' alt="" className="icon--12px" height={12} width={12}/>
+            <Image src='/icons/facebook-grey.svg' alt="" className="icon--mini-logo" height={15} width={15}/>
+            <Image src='/icons/twitter-grey.svg' alt="" className="icon--mini-logo" height={15} width={15}/>
+            <Image src='/icons/pinterest-grey.svg' alt="" className="icon--mini-logo" height={15} width={15}/>
+            <Image src='/icons/instagram-grey.svg' alt="" className="icon--mini-logo" height={15} width={15}/>
           </div>
           <div className="d-none d-md-block"></div>
         </div>
